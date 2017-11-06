@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.jacey</groupId>
-    <artifactId>Examination_System</artifactId>
+    <groupId>com.wxs</groupId>
+    <artifactId>Online_Study_System</artifactId>
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
-    <name>Examination_System Maven Webapp</name>
+    <name>EOnline_Study_System Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
 
