@@ -2,9 +2,8 @@ package com.wxs.mapper;
 
 import com.wxs.po.Userlogin;
 import com.wxs.po.UserloginExample;
-import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserloginMapper {
     int countByExample(UserloginExample example);

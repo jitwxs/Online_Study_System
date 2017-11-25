@@ -1,6 +1,5 @@
 package com.wxs.service.impl;
 
-
 import com.wxs.mapper.UserloginMapper;
 import com.wxs.po.Userlogin;
 import com.wxs.po.UserloginExample;
@@ -8,6 +7,7 @@ import com.wxs.service.UserloginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,18 +28,18 @@ public class UserloginServiceImpl implements UserloginService {
      * @throws Exception
      */
     @Override
-    public Userlogin findByName(String name) throws Exception {
+    public Userlogin findByName(String name) {
         UserloginExample userloginExample = new UserloginExample();
 
         UserloginExample.Criteria criteria = userloginExample.createCriteria();
         criteria.andNameEqualTo(name);
 
-        List<Userlogin> list = userloginMapper.selectByExample(userloginExample);
+        List<Userlogin> lists = userloginMapper.selectByExample(userloginExample);
 
-        if(list.size() == 0) {
-            return null;
+        if (lists.size() > 0) {
+            return lists.get(0);
         } else {
-            return list.get(0);
+            return null;
         }
     }
 

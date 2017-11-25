@@ -15,7 +15,7 @@ public interface UserloginService {
      * @return
      * @throws Exception
      */
-    Userlogin findByName(String name) throws Exception;
+    Userlogin findByName(String name);
 
     /**
      * 根据Id查询

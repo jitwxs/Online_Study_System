@@ -74,7 +74,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from userLogin
+    from userlogin
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
@@ -85,27 +85,27 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from userLogin
+    from userlogin
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from userLogin
+    delete from userlogin
     where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.wxs.po.UserloginExample" >
-    delete from userLogin
+    delete from userlogin
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.wxs.po.Userlogin" keyProperty="id" useGeneratedKeys="true">
-    insert into userLogin (id, name, password, 
+  <insert id="insert" parameterType="com.wxs.po.Userlogin" >
+    insert into userlogin (id, name, password, 
       role)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=CHAR}, 
       #{role,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.wxs.po.Userlogin" >
-    insert into userLogin
+    insert into userlogin
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -136,13 +136,13 @@
     </trim>
   </insert>
   <select id="countByExample" parameterType="com.wxs.po.UserloginExample" resultType="java.lang.Integer" >
-    select count(*) from userLogin
+    select count(*) from userlogin
     <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map" >
-    update userLogin
+    update userlogin
     <set >
       <if test="record.id != null" >
         id = #{record.id,jdbcType=INTEGER},
@@ -162,7 +162,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map" >
-    update userLogin
+    update userlogin
     set id = #{record.id,jdbcType=INTEGER},
       name = #{record.name,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=CHAR},
@@ -172,7 +172,7 @@
     </if>
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.wxs.po.Userlogin" >
-    update userLogin
+    update userlogin
     <set >
       <if test="name != null" >
         name = #{name,jdbcType=VARCHAR},
@@ -187,7 +187,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.wxs.po.Userlogin" >
-    update userLogin
+    update userlogin
     set name = #{name,jdbcType=VARCHAR},
       password = #{password,jdbcType=CHAR},
       role = #{role,jdbcType=INTEGER}
