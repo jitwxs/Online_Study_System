@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--shiro标签--%>
-<%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
+<%@ include file="/WEB-INF/jsp/taglib.jsp" %>
 <!-- 顶栏 -->
 <div class="container" id="top">
     <div class="row">
@@ -8,7 +7,7 @@
             <!--加入导航条标题-->
             <div class="navbar navbar-default" role="navigation">
                 　<div class="navbar-header">
-                　    <a href="/admin/showCourse" class="navbar-brand">在线课程管理系统(管理员端)</a>
+                　    <a href="${ctx}/admin/showCourse" class="navbar-brand">在线课程管理系统(管理员端)</a>
                 　</div>
                 <form action="##" class="navbar-form navbar-right" rol="search">
                     <div class="dropdown">
@@ -18,16 +17,8 @@
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <%--<li role="presentation">--%>
-                                <%--<a role="menuitem" tabindex="-1" href="#">--%>
-                                    <%--<span class="glyphicon glyphicon-cog pull-right"></span>--%>
-                                    <%--个人中心--%>
-                                <%--</a>--%>
-                            <%--</li>--%>
-                            <%--<!-- 分割线 -->--%>
-                            <%--<li role="presentation" class="divider"></li>--%>
                             <li role="presentation">
-                                <a role="menuitem" tabindex="-1" href="/admin/logout">
+                                <a role="menuitem" tabindex="-1" href="${ctx}/admin/logout">
                                     <span class="glyphicon glyphicon-off pull-right"></span>
                                     注销
                                 </a>

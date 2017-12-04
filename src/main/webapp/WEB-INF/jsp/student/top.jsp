@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--shiro标签--%>
-<%@taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
+<%@ include file="/WEB-INF/jsp/taglib.jsp" %>
+
 <!-- 顶栏 -->
 <div class="container" id="top">
     <div class="row">
@@ -8,7 +8,7 @@
             <!--加入导航条标题-->
             <div class="navbar navbar-default" role="navigation">
                 　<div class="navbar-header">
-                　    <a href="/student/showCourse" class="navbar-brand">在线课程管理系统(学生端)</a>
+                　    <a href="${ctx}/student/showCourse" class="navbar-brand">在线课程管理系统(学生端)</a>
                 　</div>
                 <form action="##" class="navbar-form navbar-right" rol="search">
                     <div class="dropdown">
@@ -19,7 +19,7 @@
                         </button>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                             <li role="presentation">
-                                <a role="menuitem" tabindex="-1" href="/student/showSelf">
+                                <a role="menuitem" tabindex="-1" href="${ctx}/student/showSelf">
                                     <span class="glyphicon glyphicon-cog pull-right"></span>
                                     个人中心
                                 </a>
@@ -27,7 +27,7 @@
                             <!-- 分割线 -->
                             <li role="presentation" class="divider"></li>
                             <li role="presentation">
-                                <a role="menuitem" tabindex="-1" href="/student/recharge">
+                                <a role="menuitem" tabindex="-1" href="${ctx}/student/recharge">
                                     <span class="lyphicon glyphicon-credit-card pull-right"></span>
                                     氪金中心
                                 </a>
@@ -35,7 +35,7 @@
                             <!-- 分割线 -->
                             <li role="presentation" class="divider"></li>
                             <li role="presentation">
-                                <a role="menuitem" tabindex="-1" href="/student/logout">
+                                <a role="menuitem" tabindex="-1" href="${ctx}/student/logout">
                                     <span class="glyphicon glyphicon-off pull-right"></span>
                                     注销
                                 </a>

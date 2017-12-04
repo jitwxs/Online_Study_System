@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt" %>
+<%@ include file="/WEB-INF/jsp/taglib.jsp" %>
 
 <!DOCTYPE html>
 <html>
@@ -9,18 +8,18 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- 引入bootstrap -->
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="${ctx}/css/bootstrap.min.css">
 	<!-- 引入JQuery  bootstrap.js-->
-	<script src="/js/jquery-3.2.1.min.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
+	<script src="${ctx}/js/jquery-3.2.1.min.js"></script>
+	<script src="${ctx}/js/bootstrap.min.js"></script>
 </head>
 <body>
 	<!-- 顶栏 -->
-	<jsp:include page="top.jsp"></jsp:include>
+	<jsp:include page="top.jsp"/>
 	<!-- 中间主体 -->
 		<div class="container" id="content">
 		<div class="row">
-			<jsp:include page="menu.jsp"></jsp:include>
+			<jsp:include page="menu.jsp"/>
 			<div class="col-md-10">
 				<div class="panel panel-default">
 				    <div class="panel-heading">
@@ -29,7 +28,7 @@
 						</div>
 				    </div>
 				    <div class="panel-body">
-						<form class="form-horizontal" role="form" action="/admin/editTeacher" id="editfrom" method="post">
+						<form class="form-horizontal" role="form" action="${ctx}/admin/editTeacher" id="editfrom" method="post">
 							<input type="hidden" name="id" value="${teacher.id}"/>
 							  <div class="form-group">
 							    <label class="col-sm-2 control-label">姓名</label>
@@ -55,7 +54,7 @@
 							    </div>
 							  </div>
 							  <div class="form-group">
-								<label class="col-sm-2 control-label" name="degree">学历：</label>
+								<label class="col-sm-2 control-label" >学历：</label>
 								<div class="col-sm-10">
 									<select class="form-control" name="degree" id="degree">
 										<option value="本科">本科</option>
@@ -65,7 +64,7 @@
 								</div>
 							  </div>
 							  <div class="form-group">
-							    <label class="col-sm-2 control-label" name="grade">注册日期</label>
+							    <label class="col-sm-2 control-label">注册日期</label>
 							    <div class="col-sm-10">
 								    <input type="date" class="form-control" readonly="true" value="<fmt:formatDate value="${teacher.registerTime}" dateStyle="medium" pattern="yyyy-MM-dd" />" name="registerTime"/>
 							    </div>
