@@ -34,13 +34,13 @@
 				  <div class="form-group">
 				    <label class="col-sm-3 control-label">名称：</label>
 				    <div class="col-sm-9">
-				      <input type="text" class="form-control" id="name" placeholder="请输入登录名" name="name">
+				      <input type="text" class="form-control" placeholder="请输入登录名" name="name" required="required">
 				    </div>
 				  </div>
 				  <div class="form-group">
 				    <label class="col-sm-3 control-label">密码：</label>
 				    <div class="col-sm-9">
-				      <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+				      <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password" required="required">
 				    </div>
 				  </div>
 
