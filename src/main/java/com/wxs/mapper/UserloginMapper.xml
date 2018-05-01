@@ -98,7 +98,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.wxs.po.Userlogin" >
+  <insert id="insert" parameterType="com.wxs.po.Userlogin" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
     insert into userlogin (id, name, password, 
       role)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=CHAR}, 
